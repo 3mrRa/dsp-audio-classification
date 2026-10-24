@@ -1,0 +1,19 @@
+==========================================================================================
+  DSP AUDIO DEEPFAKE DETECTION -- PERFORMANCE METRICS
+==========================================================================================
+
+                   Features    Classifier  Accuracy  Precision  Recall  F1-Score
+          Baseline  (7 DSP)     SVM (RBF)    0.9700     0.9896  0.9500    0.9694
+          Baseline  (7 DSP)      KNN  k=5    0.9550     0.9892  0.9200    0.9534
+          Baseline  (7 DSP) Logistic Reg.    0.8300     0.8113  0.8600    0.8350
+          Baseline  (7 DSP) Decision Tree    0.9100     0.9457  0.8700    0.9062
+Extended  (7 DSP + 13 MFCC)     SVM (RBF)    0.9850     1.0000  0.9700    0.9848
+Extended  (7 DSP + 13 MFCC)      KNN  k=5    0.9700     1.0000  0.9400    0.9691
+Extended  (7 DSP + 13 MFCC) Logistic Reg.    0.9550     0.9789  0.9300    0.9538
+Extended  (7 DSP + 13 MFCC) Decision Tree    0.9700     0.9896  0.9500    0.9694
+
+==========================================================================================
+  Labels        : Real = 0,  Fake = 1
+  Baseline feats: ZCR, STE, Centroid, Bandwidth, Rolloff, Flatness, Autocorr
+  Extended feats: Baseline + MFCC-1 to MFCC-13
+==========================================================================================
